@@ -10,7 +10,7 @@
 ## Τι περιέχει
 
 ```
-thesis/
+.
 ├── run_analysis.py          # Κύρια ανάλυση: σενάρια S0–S4 + βελτιστοποίηση Φ/Β
 ├── requirements.txt
 ├── src/poseidonio/          # Το υπολογιστικό μοντέλο (Python)
