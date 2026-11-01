@@ -85,8 +85,12 @@ def main() -> None:
     sweep = pv_sizing_sweep(site, kwp_grid, tmy=tmy)
     sweep.to_csv(RESULTS / "pv_sizing_sweep.csv", index=False, float_format="%.2f")
     best = sweep.loc[sweep["npv_eur"].idxmax()]
+    best_auto = sweep.loc[sweep["self_sufficiency_pct"].idxmax()]
     print(f"\nΒέλτιστο Φ/Β κατά NPV (όριο στέγης {kwp_max:.0f} kWp): {best['pv_kwp']:.0f} kWp "
           f"(NPV {best['npv_eur']/1e6:.2f} M€, αυτονομία {best['self_sufficiency_pct']:.1f} %)")
+    print(f"Μέγιστη ενεργειακή αυτονομία (ερευνητικό ερώτημα 1): "
+          f"{best_auto['self_sufficiency_pct']:.1f} % στα {best_auto['pv_kwp']:.0f} kWp "
+          f"(NPV {best_auto['npv_eur']/1e6:.2f} M€)")
 
     # ---- Διαγράμματα -------------------------------------------------------
     r2 = scen["S2 Α/Θ+Φ/Β (τρέχον κλίμα)"].hourly
