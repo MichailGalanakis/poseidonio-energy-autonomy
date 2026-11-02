@@ -47,7 +47,8 @@ class Hall:
     rh_setpoint: float = 0.65        # σχετική υγρασία [ΒΑΘΜΟΝΟΜΗΣΗ· ΑΥΤΟΨΙΑ]
     air_speed_ms: float = 0.10       # ταχύτητα αέρα πάνω από το νερό (<0.15 m/s)
     heat_recovery_eff: float = 0.60  # βαθμός απόδοσης εναλλάκτη ΚΚΜ [ΑΥΤΟΨΙΑ]
-    envelope_ua_w_k: float = 14000   # συνολικό UA κελύφους (W/K) [ΒΑΘΜΟΝΟΜΗΣΗ]
+    envelope_ua_w_k: float = 15500   # συνολικό UA κελύφους (W/K) [ΒΑΘΜΟΝΟΜΗΣΗ
+                                     # με πραγματικό PVGIS TMY]
 
 
 @dataclass

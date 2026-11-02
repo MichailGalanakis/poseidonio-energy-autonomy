@@ -82,8 +82,22 @@ def synthetic_tmy(latitude: float = 40.579) -> pd.DataFrame:
 
 
 def load_pvgis_tmy(path: str, latitude: float = 40.579) -> pd.DataFrame:
-    """Φορτώνει PVGIS TMY CSV (v5) στο ίδιο σχήμα με το synthetic_tmy()."""
-    raw = pd.read_csv(path, skiprows=16, skipfooter=12, engine="python")
+    """Φορτώνει PVGIS TMY CSV (v5.2/v5.3) στο ίδιο σχήμα με το synthetic_tmy().
+
+    Εντοπίζει δυναμικά τη γραμμή επικεφαλίδας "time(UTC),..." (το πλήθος των
+    γραμμών μεταδεδομένων διαφέρει μεταξύ εκδόσεων PVGIS) και αγνοεί το
+    υποσέλιδο με τις περιγραφές των στηλών.
+    """
+    with open(path, encoding="utf-8-sig") as f:
+        lines = f.readlines()
+    header_idx = next(i for i, ln in enumerate(lines) if ln.startswith("time(UTC)"))
+    from io import StringIO
+    data_lines = [lines[header_idx]]
+    for ln in lines[header_idx + 1:]:
+        if ln.strip() == "" or not ln[:4].isdigit():
+            break
+        data_lines.append(ln)
+    raw = pd.read_csv(StringIO("".join(data_lines)))
     raw.columns = [c.strip() for c in raw.columns]
     idx = pd.date_range("2023-01-01", periods=8760, freq="h")
     df = pd.DataFrame({
