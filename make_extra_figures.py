@@ -206,7 +206,8 @@ def fig_npv_profile() -> None:
     ax.annotate(f"IRR ≈ {irr*100:.0f} %", (irr * 100, 0),
                 textcoords="offset points", xytext=(10, 10), color="r")
     ax.axvline(5, ls="--", c="g", alpha=0.7)
-    ax.annotate("r = 5 %\nNPV = 1,44 M€", (5, float(np.interp(0.05, rates, npvs))),
+    npv5 = float(np.interp(0.05, rates, npvs))
+    ax.annotate(f"r = 5 %\nNPV = {npv5:.2f} M€".replace(".", ","), (5, npv5),
                 textcoords="offset points", xytext=(10, 10), color="g")
     ax.set_xlabel("Επιτόκιο προεξόφλησης r (%)")
     ax.set_ylabel("ΚΠΑ (M€)")

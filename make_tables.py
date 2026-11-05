@@ -56,9 +56,11 @@ def worked_example_evaporation() -> dict:
     v = site.hall.air_speed_ms
     m = pool.area_m2 * (pw - pa) * (0.089 + 0.0782 * v) / LATENT_KJ_KG * pool.activity_factor
     q_evap = m * LATENT_KJ_KG
+    from poseidonio.climate import TOTEE_THESSALONIKI
+    t_g = float(TOTEE_THESSALONIKI.loc[1, "t_ground_c"])   # Ιανουάριος, ΤΟΤΕΕ Πίν. 6.1
     df = pool_losses_kw(pool, np.array([t_hall]), np.array([rh]), v,
-                        np.array([10.5]), np.array([True]))
-    return {"A": pool.area_m2, "pw": pw, "pa": pa, "v": v, "FA": pool.activity_factor,
+                        np.array([t_g]), np.array([True]))
+    return {"A": pool.area_m2, "t_ground": t_g, "pw": pw, "pa": pa, "v": v, "FA": pool.activity_factor,
             "m_kg_s": m, "m_kg_h": m * 3600, "q_evap_kw": q_evap,
             **{k: float(df[k].iloc[0]) for k in df.columns}}
 
