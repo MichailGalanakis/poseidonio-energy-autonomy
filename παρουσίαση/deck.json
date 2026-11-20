@@ -1,0 +1,18 @@
+{
+  "v": 4,
+  "createdOnFiles": {"v": 1, "at": "2026-11-02T12:00:00Z"},
+  "lists": "css",
+  "title": "Ενεργειακή Αυτονομία & Κλιματική Ανθεκτικότητα — Ποσειδώνιο",
+  "order": ["cover", "problem", "questions", "method", "poseidonio", "realdata", "model", "calibration", "demand", "system", "pvsizing", "co2", "climate", "chp", "economics", "sensitivity", "conclusions", "next", "thanks"],
+  "sections": {
+    "s1": {"description": "Το πρόβλημα, τα ερευνητικά ερωτήματα και η μέθοδος", "start": "cover"},
+    "s2": {"description": "Το Ποσειδώνιο, τα πραγματικά δεδομένα και το βαθμονομημένο μοντέλο", "start": "poseidonio"},
+    "s3": {"description": "Το προτεινόμενο σύστημα και οι απαντήσεις στα τρία ερωτήματα", "start": "system"},
+    "s4": {"description": "Οικονομική αξιολόγηση, συμπεράσματα και επόμενα βήματα", "start": "economics"}
+  },
+  "faces": {
+    "noto-serif": {"family": "Noto Serif", "href": "https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400..700&display=swap"},
+    "noto-sans": {"family": "Noto Sans", "href": "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400..700&display=swap"}
+  },
+  "designSystems": []
+}
