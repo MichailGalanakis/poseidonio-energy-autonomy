@@ -27,7 +27,10 @@
 │   ├── build_docx.py              # παραγωγή Word κατά τον Οδηγό Συγγραφής ΤΜΟΔ
 │   ├── make_appendices.py         # παραγωγή παραρτημάτων από τα δεδομένα
 │   └── διπλωματική-σχέδιο-v3.docx # ενιαίο Word (~109 σελ.)
-│   (παρουσίαση υποστήριξης, 19 διαφάνειες: https://claude.ai/artifact/L8zHXBmxEtNN3eQEhnwR6V)
+├── παρουσίαση/              # Παρουσίαση υποστήριξης (19 διαφάνειες)
+│   ├── παρουσίαση.pdf             # έτοιμη για προβολή/εκτύπωση
+│   ├── σημειώσεις-ομιλητή.md      # τι λέγεται σε κάθε διαφάνεια
+│   └── slides/, deck.json         # πηγαία αρχεία (online: https://claude.ai/artifact/L8zHXBmxEtNN3eQEhnwR6V)
 ├── data/                    # ΠΡΑΓΜΑΤΙΚΑ δεδομένα (PTZ μετρητής ΕΔΑ, μελέτες ΓΓΑ)
 │   ├── poseidonio_gas_monthly.csv              # μηνιαία κατανάλωση ΦΑ έτους αναφοράς
 │   ├── poseidonio_heating_hourly_typical_day.csv  # ωριαίο προφίλ θέρμανσης ανά μήνα
