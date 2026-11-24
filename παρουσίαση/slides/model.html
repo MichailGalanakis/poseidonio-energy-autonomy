@@ -1,0 +1,33 @@
+<section id="model" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'Noto Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<p style="font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#2A7AB0;font-weight:600">Το μοντέλο</p>
+<h2 style="font-family:'Noto Serif', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15">Ωριαία προσομοίωση 8.760 ωρών</h2>
+<div style="display:flex;gap:16px;align-items:center">
+<div style="flex:1;background:#FFFFFF;padding:28px;border-radius:16px;border:1px solid #E1DDD2;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:30px;font-weight:700">Κλίμα</h3>
+<p style="font-size:24px;color:#4A5568;line-height:1.35">PVGIS TMY, morphing 2040</p>
+</div>
+<x-shape kind="arrow-right" style="width:56px;height:28px;background:#2A7AB0"></x-shape>
+<div style="flex:1;background:#FFFFFF;padding:28px;border-radius:16px;border:1px solid #E1DDD2;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:30px;font-weight:700">Ζήτηση</h3>
+<p style="font-size:24px;color:#4A5568;line-height:1.35">εξάτμιση, αγωγή, νερό, κέλυφος, ΖΝΧ</p>
+</div>
+<x-shape kind="arrow-right" style="width:56px;height:28px;background:#2A7AB0"></x-shape>
+<div style="flex:1;background:#FFFFFF;padding:28px;border-radius:16px;border:1px solid #E1DDD2;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:30px;font-weight:700">Α/Θ</h3>
+<p style="font-size:24px;color:#4A5568;line-height:1.35">ωριαίος COP από τη θερμοκρασία</p>
+</div>
+<x-shape kind="arrow-right" style="width:56px;height:28px;background:#2A7AB0"></x-shape>
+<div style="flex:1;background:#FFFFFF;padding:28px;border-radius:16px;border:1px solid #E1DDD2;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:30px;font-weight:700">Φ/Β</h3>
+<p style="font-size:24px;color:#4A5568;line-height:1.35">Erbs, Liu–Jordan, NOCT</p>
+</div>
+<x-shape kind="arrow-right" style="width:56px;height:28px;background:#2A7AB0"></x-shape>
+<div style="flex:1;background:#14213D;color:#F7F5EF;padding:28px;border-radius:16px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:30px;font-weight:700">Αξιολόγηση</h3>
+<p style="font-size:24px;color:#D9E2EC;line-height:1.35">net billing, NPV, CO₂</p>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.45;color:#4A5568">Η εξάτμιση υπολογίζεται με την εξίσωση της ASHRAE: <b style="color:#14213D">ṁ = A·(pw − pa)·(0,089 + 0,0782·V) / Y · FA</b> — η κινητήρια δύναμη είναι η διαφορά πίεσης υδρατμών, όχι η θερμοκρασία.</p>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">7</p>
+<aside>Κάθε ώρα του έτους το μοντέλο περνά από πέντε βήματα. Η καρδιά του είναι το θερμικό ισοζύγιο των τεσσάρων δεξαμενών κατά ASHRAE. Για μια εσωτερική δεξαμενή τον Ιανουάριο, εξατμίζονται περίπου 60 κιλά νερού την ώρα, δηλαδή 40,5 kW απώλεια μόνο από την εξάτμιση. Η ωριαία ανάλυση χρειάζεται επειδή το net billing συμψηφίζει ώρα προς ώρα.</aside>
+</section>
